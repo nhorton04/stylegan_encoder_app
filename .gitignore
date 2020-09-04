@@ -1,0 +1,5 @@
+data/
+karras2019stylegan-ffhq-1024x1024.pkl
+cache/aff7883aa2841415e70805b65ab5fc46_latent_training_data.pkl.gz
+cache/263e666dc20e26dcbfa514733c1d1f81_karras2019stylegan-ffhq-1024x1024.pkl
+shape_predictor_68_face_landmarks.dat
