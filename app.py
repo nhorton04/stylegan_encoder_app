@@ -62,8 +62,8 @@ def main():
         with dnnlib.util.open_url(URL_FFHQ, cache_dir=config.cache_dir) as f:
             generator_network, discriminator_network, Gs_network = pickle.load(f)
         # load the latents
-        s1 = np.load('lrs/IMG_4402_01.npy')
-        s2 = np.load('lrs/download (1)_01.npy')
+        s1 = np.load('lrs/176557_10150108810979851_7868129_o_01_01.npy')
+        s2 = np.load('lrs/IMG_2482_01_01.npy')
         s1 = np.expand_dims(s1,axis=0)
         s2 = np.expand_dims(s2,axis=0)
         # combine the latents somehow... let's try an average:

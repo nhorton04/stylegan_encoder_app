@@ -45,27 +45,14 @@ def unpack_bz2(src_path):
 
 def main():
     #Upload images
-    uploaded_file = st.file_uploader("Choose a picture", type=['jpg', 'png'])
-    if uploaded_file is not None:
-        st.image(uploaded_file, width=200)
-    second_uploaded_file = st.file_uploader("Choose another picture", type=['jpg', 'png'])
-    if second_uploaded_file is not None:
-        st.image(second_uploaded_file, width=200)
-
-    img1 = np.array(uploaded_file)
-    img2 = np.array(second_uploaded_file)
-
-    image1 = PIL.Image.open(uploaded_file)
-    image2 = PIL.Image.open(second_uploaded_file)
-
-    images = [image1, image2]
+    st.write('Please put the images you want to use in the folder /raw_images/ in the source directory. The full path looks like this --> ../stylegan_encoder_app/raw_images/')
 
     if st.button('Align images'):
-        align(images)
+        align()
 
 
 
-def align(images):
+def align():
     landmarks_model_path = unpack_bz2(get_file('shape_predictor_68_face_landmarks.dat.bz2',
                                                LANDMARKS_MODEL_URL, cache_subdir='temp'))
     RAW_IMAGES_DIR = './raw_images'
